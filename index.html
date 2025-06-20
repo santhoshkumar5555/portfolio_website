@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SURYA | Marketing Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .intro {
+      max-width: 700px;
+      margin: 2rem auto;
+      text-align: center;
+      animation: fadeInUp 1.2s ease forwards;
+    }
+    .intro p {
+      font-size: 1.15rem;
+      margin-bottom: 1.5rem;
+      color: #222;
+      line-height: 1.5;
+    }
+    .highlights {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+      animation: fadeInUp 1.5s ease forwards;
+    }
+    .highlight-item {
+      background-color: #004080;
+      color: white;
+      padding: 1.2rem 2rem;
+      border-radius: 12px;
+      min-width: 180px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+    .highlight-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    }
+    .cta-buttons {
+      text-align: center;
+      animation: fadeInUp 1.8s ease forwards;
+    }
+    .cta-buttons a {
+      display: inline-block;
+      background-color: #ff6f61;
+      color: white;
+      padding: 14px 36px;
+      margin: 0 10px;
+      border-radius: 30px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 6px 12px rgba(255,111,97,0.4);
+      transition: background-color 0.3s ease;
+    }
+    .cta-buttons a:hover {
+      background-color: #ff4a3d;
+    }
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      display: none;
+      background-color: #004080;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 100;
+      font-size: 18px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    #scrollTopBtn:hover {
+      background-color: #00264d;
+    }
+
+    /* Chatbot styles */
+    #chatbot {
+      max-width: 400px;
+      margin: 2rem auto;
+      padding: 1rem;
+      border: 2px solid #004080;
+      border-radius: 12px;
+      background-color: #f5faff;
+      box-shadow: 0 4px 12px rgba(0,64,128,0.2);
+      font-family: 'Inter', sans-serif;
+    }
+    #chatbox {
+      height: 300px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      background: white;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    #chatbox div.user {
+      text-align: right;
+      margin: 5px 0;
+      color: #004080;
+      font-weight: 600;
+    }
+    #chatbox div.bot {
+      text-align: left;
+      margin: 5px 0;
+      color: #333;
+      font-weight: 400;
+    }
+    #userInput {
+      width: calc(100% - 80px);
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    #chatbot button {
+      padding: 8px 16px;
+      margin-left: 6px;
+      background-color: #004080;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    #chatbot button:hover {
+      background-color: #00264d;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">About</a>
+  <a href="skills.html">Skills</a>
+  <a href="resume.html">Resume</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<header>
+  <div class="hero-overlay">
+    <h1 style="color: aqua;">SURYA</h1>
+    <p id="typing-text">Marketing Graduate | Digital Marketing | SEO Specialist</p>
+    <a href="resume.pdf" download class="resume-button">Download Resume</a>
+  </div>
+</header>
+
+<section class="intro">
+  <p>
+    I am a passionate marketing professional who combines creativity with data-driven strategies to grow brands and engage audiences. With a strong foundation in digital marketing tools and hands-on experience, I strive to deliver impactful campaigns that drive measurable results.
+  </p>
+</section>
+
+<section class="highlights" aria-label="Key Strengths">
+  <div class="highlight-item">SEO & SEM Expertise</div>
+  <div class="highlight-item">Social Media Strategy</div>
+  <div class="highlight-item">Content Creation & Copywriting</div>
+  <div class="highlight-item">Data Analytics & Google Analytics</div>
+  <div class="highlight-item">HubSpot & Marketing Automation</div>
+</section>
+
+<section class="cta-buttons">
+  <a href="resume.pdf" download>Download Resume</a>
+  <a href="contact.html">Get in Touch</a>
+</section>
+
+<!-- Chatbot Section (moved inside body) -->
+<section id="chatbot">
+  <div id="chatbox"></div>
+  <input type="text" id="userInput" placeholder="Type your message..." />
+  <button onclick="sendMessage()">Send</button>
+</section>
+
+<!-- Scroll to Top Button -->
+<button id="scrollTopBtn" title="Go to top">↑</button>
+
+<footer>
+  © 2025 Santhoshkumar | Connect on LinkedIn: 
+  <a href="https://linkedin.com/in/santhoshkumar" target="_blank" rel="noopener">santhoshkumar</a>
+</footer>
+
+<!-- JavaScript Files loaded at the end -->
+<script src="typing.js"></script>
+<script src="smooth-scroll.js"></script>
+<script src="scroll-to-top.js"></script>
+<script src="chatbot.js"></script>
+
+</body>
+</html>
